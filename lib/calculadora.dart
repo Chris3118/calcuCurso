@@ -76,7 +76,7 @@ class _CalculadoraChrisState extends State<CalculadoraChris> {
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           padding: EdgeInsets.all(24.0),
-          foregroundColor: Colors.white, // Color del texto
+          foregroundColor: Color(0xFF000000),
           backgroundColor: Colors.blue[500],
         ),
         child: Text(
@@ -98,6 +98,7 @@ class _CalculadoraChrisState extends State<CalculadoraChris> {
       ),
       body: Column(
         children: [
+          //CONTENEDOR
           Container(
             alignment: Alignment.centerRight,
             padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
@@ -106,9 +107,14 @@ class _CalculadoraChrisState extends State<CalculadoraChris> {
               style: TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold),
             ),
           ),
+
+          //LINEA
           Expanded(child: Divider()),
+
+          //COLUMNA DE BOTONES
           Column(
             children: [
+              //PRIMER WIDGET
               Row(
                 children: [
                   construirBoton("7"),
@@ -117,6 +123,8 @@ class _CalculadoraChrisState extends State<CalculadoraChris> {
                   construirBoton("/"),
                 ],
               ),
+
+              //SEGUNDO WIDGET
               Row(
                 children: [
                   construirBoton("4"),
@@ -125,6 +133,8 @@ class _CalculadoraChrisState extends State<CalculadoraChris> {
                   construirBoton("x"),
                 ],
               ),
+
+              //TERCER WIDGET
               Row(
                 children: [
                   construirBoton("1"),
@@ -133,6 +143,8 @@ class _CalculadoraChrisState extends State<CalculadoraChris> {
                   construirBoton("-"),
                 ],
               ),
+
+              //CUARTO WIDGET
               Row(
                 children: [
                   construirBoton("."),
@@ -141,6 +153,8 @@ class _CalculadoraChrisState extends State<CalculadoraChris> {
                   construirBoton("+"),
                 ],
               ),
+
+              //QUINTO WIDGET
               Row(
                 children: [construirBoton("C")],
               ),
